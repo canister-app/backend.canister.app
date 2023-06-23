@@ -1,0 +1,32 @@
+{
+  "canisters": {
+    "canister_manager": {
+      "main": "src/main.mo",
+      "type": "motoko"
+    },
+    "storage":{
+      "main": "src/storage/main.mo",
+      "type": "motoko"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": "vessel sources"
+    }
+  },
+  "dfx": "0.14.0",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    },
+    "staging": {
+      "providers": [
+          "https://icp0.io"
+      ],
+      "type": "persistent"
+  }
+  },
+  "version": 1
+}
